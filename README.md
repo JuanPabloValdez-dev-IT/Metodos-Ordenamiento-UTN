@@ -1,23 +1,26 @@
 # Sistema Comparativo de Métodos de Ordenamiento en C++ 📊
 
-Este proyecto es el Trabajo Integrador Final para la materia **Algoritmos y Estructuras de Datos** de la Universidad Tecnológica Nacional (UTN - FRT). 
+Este proyecto es parte del Trabajo Integrador Final para la materia **Algoritmos y Estructuras de Datos** de la Universidad Tecnológica Nacional (UTN - FRT). 
 
-Consiste en una aplicación de consola desarrollada en **C++** que permite a través de un menú interactivo ejecutar, comparar y analizar la eficiencia de distintos algoritmos de ordenamiento de datos utilizando vectores.
+Consiste en una aplicación de consola con un menú interactivo desarrollada en **C/C++** que permite ejecutar, evaluar y comparar el rendimiento empírico de distintos algoritmos de ordenamiento utilizando vectores estáticos.
 
 ## 🚀 Algoritmos Implementados
-* **Bubble Sort:** Ideal para listas pequeñas; destaca por su estabilidad.
-* **Selection Sort:** Método sencillo de selección de mínimos, útil para bajo consumo de memoria.
-* **Insertion Sort:** Excelente rendimiento en listas parcial o casi ordenadas.
-* **Quick Sort:** Algoritmo de "divide y vencerás", el más eficiente para procesar grandes volúmenes de datos.
-* **Merge Sort:** Rendimiento predecible y estable mediante división y fusión.
+* **Bubble Sort (Burbuja):** Algoritmo de intercambio simple, ideal para demostrar la base lógica del ordenamiento.
+* **Selection Sort (Selección):** Método de búsqueda de mínimos sucesivos.
+* **Quick Sort:** Algoritmo avanzado de "divide y vencerás", altamente eficiente para procesar datos a gran velocidad.
+
+## ⏱️ Funcionalidad Destacada: Benchmarking y Testing
+Para evaluar la complejidad y eficiencia de cada método, el sistema incluye métricas en tiempo real:
+* **Medición de Tiempo:** Utiliza la librería `<time.h>` para calcular el tiempo de ejecución exacto en segundos.
+* **Contadores de Complejidad:** El programa rastrea y muestra en pantalla la cantidad exacta de **comparaciones** y de **intercambios** (swaps) que requiere cada algoritmo para ordenar el mismo conjunto de datos.
+* **Preservación de Datos:** El sistema realiza copias en memoria del vector original desordenado para garantizar que todos los algoritmos se prueben bajo las mismas condiciones.
 
 ## 🧠 Conclusiones del Análisis
-Como parte del proyecto, realizamos un informe técnico (adjunto en formato PDF) analizando el rendimiento de cada algoritmo. Algunas conclusiones clave:
-* Para conjuntos de datos masivos (ej. bases de datos), **Quick Sort** demostró ser inmensamente superior en velocidad.
-* En escenarios donde la **estabilidad** de los datos originales es requerida (mantener el orden de elementos iguales), algoritmos como **Bubble Sort** o **Merge Sort** son la opción correcta frente a Selection o Quick Sort.
-* La elección del algoritmo depende de los recursos de memoria y el tamaño de la colección de datos.
+Como parte del proyecto, se elaboró un informe técnico analizando el rendimiento:
+* Para conjuntos de datos grandes, **Quick Sort** demostró ser inmensamente superior en velocidad y menor cantidad de comparaciones.
+* Algoritmos como **Bubble Sort** y **Selection Sort**, si bien son fáciles de implementar, muestran un aumento exponencial en la cantidad de intercambios necesarios a medida que crece el vector, volviéndolos ineficientes para bases de datos reales.
 
 ## 🛠️ Tecnologías
-* C++
+* C / C++
 * Estructuras de Datos (Vectores)
-* Lógica Algorítmica
+* Lógica Algorítmica y Benchmarking
